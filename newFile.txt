@@ -1,0 +1,1 @@
+ New file created and New content addedAppended the content into the existing file and it prevent overwriting
