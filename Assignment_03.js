@@ -31,7 +31,7 @@ http
       req.on("end", () => {
         res.write(body);
         updateItem(parseInt(productID), JSON.parse(body));
-        res.end();
+        res.end("Updated successfully");
       });
     } else if (req.method === "PATCH" && req.url === "/items/2") {
       const productID = req.url.split("/")[2];
@@ -40,12 +40,12 @@ http
       req.on("end", () => {
         res.write(body);
         patchItem(parseInt(productID), body);
-        res.end();
+        res.end("Updated successfuly using patch request");
       });
     } else if (req.method === "DELETE" && req.url === "/items/2") {
       const productID = req.url.split("/")[2];
       deleteItem(parseInt(productID));
-      res.end();
+      res.end("Item deleted successfully");
     } else {
       res.write("Invalid request");
       res.end();

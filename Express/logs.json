@@ -1,0 +1,37 @@
+[
+  {
+    "CurrentTime": "17,85,08,39,86,845",
+    "HTTPMethod": "POST",
+    "RequestedURL": "/students"
+  },
+  {
+    "CurrentTime": "17,85,08,39,93,851",
+    "HTTPMethod": "GET",
+    "RequestedURL": "/students"
+  },
+  {
+    "CurrentTime": "17,85,08,40,06,773",
+    "HTTPMethod": "GET",
+    "RequestedURL": "/students/2"
+  },
+  {
+    "CurrentTime": "17,85,08,40,20,465",
+    "HTTPMethod": "PUT",
+    "RequestedURL": "/students/2"
+  },
+  {
+    "CurrentTime": "17,85,08,40,31,316",
+    "HTTPMethod": "DELETE",
+    "RequestedURL": "/students/2"
+  },
+  {
+    "CurrentTime": "17,85,08,40,42,293",
+    "HTTPMethod": "GET",
+    "RequestedURL": "/students/2"
+  },
+  {
+    "CurrentTime": "17,85,08,40,46,862",
+    "HTTPMethod": "GET",
+    "RequestedURL": "/students"
+  }
+]

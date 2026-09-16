@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <input type="text" name="" id="name">
+        <input type="submit" value="ADD">
+        <p id="p"></p>
+    </form>
+    <script>
+        const form =document.getElementById("form");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            // const dataForm =new FormData(form);
+            // console.log(dataForm);
+            // const data=Object.fromEntries(dataForm);
+            // console.log(data);
+            const data=new URLSearchParams(new FormData(form));
+            console.log(data)
+            fetch("http://localhost:3000/users",{
+                method:"post",
+                // headers:{
+                //     "content-type":"application/json"
+                // }
+                body:data
+            }).then((response)=>{
+                if(!response.ok)
+            {
+                throw new Error("Bad request");
+            }
+              return response.text();
+            }
+        )
+    .then((data)=>{
+
+           return document.getElementById('p').innerText=data;
+        }).catch((err)=>{
+            console.log(err);
+        })
+
+    })
+    </script>
+</body>
+</html>

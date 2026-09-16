@@ -1,0 +1,49 @@
+{
+  "name": "TANIYA",
+  "contact": {
+    "phone": "+91-9053382693",
+    "email": "taniyakashyap2005@gmail.com",
+    "location": "Yamunanagar, Haryana"
+  },
+  "summary": "Dedicated BCA student with strong programming skills in C++ and Java and a passion for problem-solving and software development. Eager to apply technical knowledge and gain practical experience in a professional environment.",
+  "education": [
+    {
+      "institution": "Maharaja Agrasen Institute of Management & Technology",
+      "degree": "Diploma in Computer Science",
+      "duration": "2021-2024"
+    },
+    {
+      "institution": "Maharaja Agrasen Institute of Management & Technology",
+      "degree": "Senior Secondary",
+      "duration": "October 2024"
+    },
+    {
+      "institution": "Maharaja Agrasen Institute of Management & Technology",
+      "degree": "Bachelor of Computer Applications (BCA)",
+      "duration": "2024-2027"
+    }
+  ],
+  "projects": [
+    {
+      "name": "SwiftMart – Online Grocery Shopping Platform",
+      "description": "Developed a responsive web-based grocery shopping application using React, HTML, CSS, and JavaScript. Implemented category filtering for easy product discovery and interactive cart management for adding, updating, and reviewing items."
+    },
+    {
+      "name": "DevSpark – Developer Networking Platform",
+      "description": "Built a full-stack web application that enables developers to create professional profiles, connect with other developers, communicate in real time, build their network, and collaborate on projects."
+    }
+  ],
+  "technicalSkills": [
+    "C++",
+    "Java",
+    "Reactjs",
+    "Nodejs"
+  ],
+  "softSkills": [
+    "Self-Motivated",
+    "Quick Learner",
+    "Organized",
+    "Time Management",
+    "Detail-Oriented"
+  ]
+}

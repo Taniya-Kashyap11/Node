@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:white;
+        }
+
+        .container{
+            background:#fff;
+            width:350px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+        h1{
+            margin-bottom:20px;
+            color:#333;
+        }
+
+        input[type="text"],
+        input[type="password"]{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:8px;
+            outline:none;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus{
+            border-color:#6c63ff;
+            box-shadow:0 0 5px rgba(108,99,255,0.4);
+        }
+
+        input[type="submit"]{
+            width:100%;
+            padding:12px;
+            margin-top:15px;
+            border:none;
+            border-radius:8px;
+            background:#221d82;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        input[type="submit"]:hover{
+            background:#574fd6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Login</h1>
+    <form action="" id="form">
+        <input type="text" name="email" id="email" required placeholder="Enter Email"><br>
+        <input type="password" name="password" required id="password" placeholder="Enter password"><br>
+        <input type="submit" value="Login">
+    </form>
+    </div>
+      <script>
+        const form =document.getElementById("form");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            const data=new URLSearchParams(new FormData(form));
+            fetch("http://localhost:3000/login",{
+                method:"post",
+                body:data
+            }).then((response)=>{
+                if(!response.ok)
+            {
+                throw new Error("Bad request");
+            }
+              return response.text();
+                
+            }
+        ).then((message)=>{
+             alert(message); 
+            window.location.href ="http://127.0.0.1:5500/Frontend/home.html";
+        })
+    .catch((err)=>{
+            console.log(err);
+        })
+
+    })
+    </script>
+</body>
+</html>
